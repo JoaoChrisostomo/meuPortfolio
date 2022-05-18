@@ -53,3 +53,40 @@ tabs.forEach((tab) => {
     });
   });
 });
+
+
+/*==================== SERVICES MODAL ====================*/
+
+const modalViews = document.querySelectorAll(".services_modal");
+      modalBtns = document.querySelectorAll(".services_button");
+      modalCloses = document.querySelectorAll(".services_modal-close");
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add("active-modal");
+}
+
+modalBtns.forEach((modalBtn, i) =>{
+    modalBtn.addEventListener("click", () =>{
+        modal(i);
+    });
+});
+
+modalCloses.forEach((modalClose) =>{
+    modalClose.addEventListener("click", () =>{
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove("active-modal");
+        });
+    });
+});
+
+
+
+/*==================== MIXTUP FILTER PORTFOLIO  ====================*/
+let mixerPortfolio = mixitup(".work_container", { // Select the container class
+    selectors: { // Selectors for the filter controls
+        target: '.work_card'  // The target element to be filtered
+    },
+    Animation: {  // Set the animation parameters
+        duration: 300  // The duration of the transition
+    }
+});
