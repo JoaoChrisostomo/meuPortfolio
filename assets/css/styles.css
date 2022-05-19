@@ -244,26 +244,25 @@ justify-content: space-between;
 
 /*==================== HOME ====================*/
 .home_container{
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .home_content{
-  display: grid;
-  grid-template-columns: repeat(4fr);
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5rem;
   align-items: center;
 }
 
 .home_social{
-  border: 1px solid var(--first-color);
   display: grid;
-  grid-template-columns: repeat(1);
+  grid-template-columns: max-content;
+  row-gap: 1rem;
 }
 
 .home_social-icons{
-  display: flex;
   font-size: 1.25rem;
   color: var(--first-color);
-  transition: .3s;
+  transition: .6s;
 }
 
 .home_social-icons:hover{
@@ -276,7 +275,11 @@ justify-content: space-between;
 }
 
 .home_blob-img{
-  width: 100%;
+  width: 170px;
+}
+
+.home_data{
+  grid-column: 1/3;
 }
 .home_title{
   font-size: var(--big-font-size);
@@ -306,7 +309,7 @@ justify-content: space-between;
   transform: translateY(.25rem);
 }
 .home_scroll-mouse{
-  font-size: 5rem;
+  font-size: 1rem;
 }
 
 .home_scroll-name{
@@ -332,13 +335,6 @@ justify-content: space-between;
   border-radius: .5rem;
   font-weight: var(--font-medium);
 }
-.btn{
-  display: inline-block;
-  color: var(--first-color);
-  padding: .1rem;
-  border-radius: .5rem;
-  font-weight: var(--font-medium);
-}
 
 .button:hover{
   background-color: var(--first-color-alt);
@@ -348,13 +344,12 @@ justify-content: space-between;
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
   transition: .3s;
-  padding: 10px;
 }
 
 .button--flex{
   display: inline-flex;
   align-items: center;
-  padding: 10px 5px;
+  padding: 14px;
 }
 
 .button_small{
@@ -375,12 +370,10 @@ justify-content: space-between;
 /*==================== ABOUT ====================*/
 .about{
   text-align: center;
-  /* margin: 16px; */
   margin-top: 3rem;
 }
 .about_img{
  width: 200px;
- margin: 15px;
  border-radius: .5rem;
  justify-self: center;
  align-self: center; 
@@ -496,6 +489,9 @@ justify-content: space-between;
   font-weight: var(--font-medium);
   cursor: pointer;
 }
+#btn-work{
+  padding: .5rem 2.4rem .5rem .5rem;
+}
 
 .qualification_buttons:hover{
   color: var(--first-color);
@@ -575,6 +571,11 @@ justify-content: space-between;
 
 }
 
+.section_subtitle{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
 .services_content:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
@@ -660,71 +661,74 @@ justify-content: space-between;
 }
 
 
-/*==================== WORK====================*/
+/*==================== PORTFOLIO ====================*/
 
-.work_container{
-  gap: 1.5rem;
-  /* grid-template-columns: repeat(2, 1fr);
-  padding-top: 1rem; */
+.portfolio_container{
+  overflow: initial;
 }
 
-.work_filters{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: .75rem;
-  margin-bottom: 2rem;
+.portfolio_content{
+  padding:0 1.5rem;
 }
 
-.work_item{
-  cursor: pointer;
-  color: var(--title-color);
-  padding:  .25rem .75rem;
-  font-weight: var(--font-medium);
+.portfolio_img{
+  width: 265px;
   border-radius: .5rem;
+  justify-self: center;
+}
+ .porfolio_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+
 }
 
-.work_card{
-  background-color: rgb(103, 54, 218);
-  padding: 1rem;
-  border-radius: 1rem;
+.portfolio_description{
+  margin-bottom: var(--mb-0-75);
 }
 
-.work_img{
-  border-radius: 1rem;
-  margin-bottom: .75rem;
-}
-
-.work_title{
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: .25rem;
-}
-
-.work_button{
-  width: max-content;
-  color: black;
-  font-size: var(--small-font-size);
-  display: flex;
-  align-items: center;
-  column-gap: .25rem;
-}
-
-.work_button:hover .work_icon{
+.portfolio_button:hover .button_icon{
   transform: translateX(.25rem);
 }
 
-.work_icon{
-  font-size: 1rem;
-  transition: .4s;
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  content:"";
 }
+
+.swiper-portfolio-icon{
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev{
+  left: -.5rem;
+}
+
+.swiper-button-next{
+  right: -.5rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet{
+  outline: none;
+}
+
 
 /* Active item Work */
 
-.active-work{
+/* .active-work{
   background-color: var(--first-color-alt);
   color: var(--first-color);
-}
+} */
 
 /*==================== PROJECT IN MIND ====================*/
 

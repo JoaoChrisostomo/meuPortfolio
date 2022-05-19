@@ -84,15 +84,22 @@ modalCloses.forEach((modalClose) =>{
 
 
 
-/*==================== MIXTUP FILTER PORTFOLIO  ====================*/
-let mixerPortfolio = mixitup(".work_container", { // Select the container class
-    selectors: { // Selectors for the filter controls
-        target: '.work_card'  // The target element to be filtered
+/*==================== SWIPER PORTFOLIO  ====================*/
+let swiper = new Swiper(".portfolio_container", {
+    cssMode: true,
+    loop: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    Animation: {  // Set the animation parameters
-        duration: 300  // The duration of the transition
-    }
-});
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
 
 
 /*==================== TESTIMONIAL ====================*/

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--==================== UNICONS ====================-->
-    <link rel=" stylesheet " href=" https://unpkg.com/boxicons@latest/css/boxicons.min.css ">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -92,7 +92,10 @@
                         </a>
                     </div>
                     <div class="home_img">
-                        <img class="home_blob-img" src="/svg/man-developing-website-on-desk.svg" alt="">
+                        <svg class="home_blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#8A3FFC" d="M62.5,-39.1C74.1,-16.1,71.7,12,59,30.8C46.2,49.7,23.1,59.3,-2.8,60.9C-28.7,62.5,-57.5,56.1,-67.4,38.9C-77.3,21.7,-68.4,-6.3,-54,-31C-39.6,-55.7,-19.8,-77.1,2.8,-78.7C25.5,-80.3,50.9,-62.2,62.5,-39.1Z" transform="translate(100 100)"/>
+                            <image class="home_blob-img" xlink:href="assets/img/animation-one.png"/>
+                        </svg>
                     </div>
 
                     <div class="home_data">
@@ -100,19 +103,19 @@
                         <h3 class="home_subtitle">Frontend developer</h3>
                         <p class="home_description">High level experience in web design and knoledge, producing quality
                             work</p>
-                        <a href="#contact" class="button button--flex">Contact me
-                            <span class="iconify" data-icon="mdi:phone-dial" data-inline="false"></span>
+                        <a href="#contact" class="button button--flex">
+                            Contact me
+                            <i class='bx bx-message-rounded-dots button_icon'></i>
                         </a>
                     </div>
+                </div>
 
-                    <div class="home_scroll">
-                        <a href="#about" class="home_scroll-button button button--flex">
-                            <span class="iconify" data-icon="mdi:mouse-move-vertical" data-inline="false"></span>
-                            <span class="home_scroll-name">Scrool Down</span>
-                            <span class="iconify home_scroll-arrow" data-icon="mdi:arrow-down-circle-outline"
-                                data-inline="false"></span>
-                        </a>
-                    </div>
+                <div class="home_scroll">
+                    <a href="#about" class="home_scroll-button button button--flex">
+                        <i class='bx bx-mouse-alt home_scroll-mouse'></i>
+                        <span class="home_scrool-name">Scroll down</span>
+                        <i class='bx bx-chevron-down home_scroll-arrow' ></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -344,7 +347,7 @@
                         Education
                     </div>
 
-                    <div class="qualification_button button button--flex" data-target="#work">
+                    <div class="qualification_button button button--flex qualification_active" id="btn-work" data-target="#work">
                         <span class="iconify" data-icon="fluent:briefcase-28-filled" data-inline="false"></span>
                         Work
                     </div>
@@ -503,16 +506,141 @@
 
             <div class="services_container container grid">
                 <!--==================== SERVICES 1 ====================-->
-                <div>
-                    <div class="services_content">
-                        <i class='bx bx-grid sercies_icon'></i>
-                        <h3 class="services_title">FrontEnd<br> Developer web</h3>
+                <div class="services_content">
+                    <i class='bx bx-grid sercies_icon'></i>
+                    <h3 class="services_title">FrontEnd<br> Developer web</h3>
 
-                        <span class="btn button--flex button--small button--link services_button">
-                            View More
-                            <i class='bx bx-right-arrow-circle button_icon'></i>
-                        </span>
+                    <span class="btn button--flex button--small button--link services_button">
+                        View More
+                        <i class='bx bx-right-arrow-circle button_icon'></i>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content">
+                            <h4 class="services_modal-title">FrontEnd <br> Developer web</h4>
+                            <i class='bx bx-x services_modal-close' style='color:rgba(27,26,28,0.9)'></i>
+
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+
+                <div class="services_content">
+                    <i class='bx bx-grid sercies_icon'></i>
+                    <h3 class="services_title">FrontEnd<br> Developer web</h3>
+
+                    <span class="btn button--flex button--small button--link services_button">
+                        View More
+                        <i class='bx bx-right-arrow-circle button_icon'></i>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content">
+                            <h4 class="services_modal-title">FrontEnd <br> Developer web</h4>
+                            <i class='bx bx-x services_modal-close' style='color:rgba(27,26,28,0.9)'></i>
+
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== SERVICES 2 ====================-->
+                <div class="services_content">
+                    <i class='bx bx-grid sercies_icon'></i>
+                    <h3 class="services_title">FrontEnd<br> Developer web</h3>
+
+                    <span class="btn button--flex button--small button--link services_button">
+                        View More
+                        <i class='bx bx-right-arrow-circle button_icon'></i>
+                    </span>
+
+                    <div class="services_modal">
+                        <div class="services_modal-content">
+                            <h4 class="services_modal-title">FrontEnd <br> Developer web</h4>
+                            <i class='bx bx-x services_modal-close' style='color:rgba(27,26,28,0.9)'></i>
+
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                            <ul class="services_modal-services grid">
+                                <li class="services_modal-service">
+                                    <i class='bx bx-check-circle services_modal-icon'></i>
+                                    <p>I develop the user interface.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services_content">
+                    <i class='bx bx-grid sercies_icon'></i>
+                    <h3 class="services_title">FrontEnd<br> Developer web</h3>
+
+                    <span class="btn button--flex button--small button--link services_button">
+                        View More
+                        <i class='bx bx-right-arrow-circle button_icon'></i>
+                    </span>
 
                     <div class="services_modal">
                         <div class="services_modal-content">
@@ -549,68 +677,61 @@
             </div>
         </section>
 
-        <!--==================== MY WORKS ====================-->
-        <section class="work section" id="work">
-            <span class="section_subtitle">My Projects</span>
-            <h2 class="section_title">Recent Works</h2>
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section_title">Portfolio</h2>
+            <span class="section_subtitle">Most recent work</span>
 
-            <div class="work_filters">
-                <span class="work_item active-work" data-filter="all">All</span>
-                <span class="work_item" data-filter=".web">Web</span>
-                <span class="work_item" data-filter=".mobile">Mobile</span>
-                <span class="work_item" data-filter=".design">Design</span>
-            </div>
+            <div class="portfolio_container container swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO 1 ====================-->
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="assets/img/projeto1.png" alt="" class="portfolio_img">
 
-            <div class="work_container container grid">
-                <div class="work_card mix web">
-                    <img src="assets/img/portfolio2.jpg" alt="" class="work_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">My Projects</h3>
+                            <p class="portfolio_description">lorem level experience in web design and programming languages like Java and Scala.</p>
+                            <a href="" class="button button--flex button--small portfolio_button">
+                                Demo
+                                <i class='bx bx-chevron-right button_icon' style='color:rgba(27,26,28,0.9)'></i>
+                            </a>
+                        </div>
+                    </div>
 
-                    <h3 class="work_title">My Projects</h3>
+                    <!--==================== PORTFOLIO 2 ====================-->
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio_img">
 
-                    <a href="#" class="work_button">
-                        Demo <i class='bx bx-chevron-right bx-tada work_icon' style='color:rgba(27,26,28,0.9)'></i>
-                    </a>
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">My Projects</h3>
+                            <p class="portfolio_description">lorem level experience in web design and programming languages like Java and Scala.</p>
+                            <a href="" class="button button--flex button--small portfolio_button">
+                                Demo
+                                <i class='bx bx-chevron-right button_icon' style='color:rgba(27,26,28,0.9)'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO 3 ====================-->
+                    <div class="portfolio_content grid swiper-slide">
+                        <img src="assets/img/portfolio3.jpg" alt="" class="portfolio_img">
+
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">My Projects</h3>
+                            <p class="portfolio_description">lorem level experience in web design and programming languages like Java and Scala.</p>
+                            <a href="" class="button button--flex button--small portfolio_button">
+                                Demo
+                                <i class='bx bx-chevron-right button_icon' style='color:rgba(27,26,28,0.9)'></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="work_card mix mobile">
-                    <img src="assets/img/portfolio3.jpg" alt="" class="work_img">
-
-                    <h3 class="work_title">Projects Bootcamp</h3>
-
-                    <a href="#" class="work_button">
-                        Demo <i class='bx bx-chevron-right bx-tada work_icon' style='color:rgba(27,26,28,0.9)'></i>
-                    </a>
+                <div class="swiper-button-next">
+                    <i class='bx bx-chevron-right swiper-portfolio-icon'></i>
                 </div>
-
-                <div class="work_card mix design">
-                    <img src="svg/startup.svg" alt="">
-
-                    <h3 class="work_title">Projetos Freelancer</h3>
-
-                    <a href="#" class="work_button">
-                        Demo <i class='bx bx-chevron-right bx-tada work_icon' style='color:rgba(27,26,28,0.9)'></i>
-                    </a>
+                <div class="swiper-button-prev">
+                    <i class='bx bx-chevron-left swiper-portfolio-icon'></i>
                 </div>
-
-                <div class="work_card mix web">
-                    <img src="assets/img/portfolio2.jpg" alt="" class="work_img">
-
-                    <h3 class="work_title">Projects Courses</h3>
-
-                    <a href="#" class="work_button">
-                        Demo <i class='bx bx-chevron-right bx-tada work_icon' style='color:rgba(27,26,28,0.9)'></i>
-                    </a>
-                </div>
-
-                <div class="work_card mix mobile">
-                    <img src="assets/img/portfolio2.jpg" alt="" class="work_img">
-
-                    <h3 class="work_title">Projects Courses</h3>
-
-                    <a href="#" class="work_button">
-                        Demo <i class='bx bx-chevron-right bx-tada work_icon' style='color:rgba(27,26,28,0.9)'></i>
-                    </a>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -640,6 +761,7 @@
     <!--==================== MIXTUP FILTER ====================-->
     <script src="assets/js/mixitup.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
